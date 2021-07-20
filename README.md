@@ -5,14 +5,14 @@ Overview of Detectron2 usage
 # Training and Evaluation
 ## Faster R-CNN +FPN with ResNet-50
 
-```python
+```bash
 python tools/train_net.py --num-gpus 2 --config-file configs/COCO-Detection/faster_rcnn_R_50_FPN_1x.yaml
 ```
 
 ---
 # Evaluation only
 
-```python
+```bash
 python tools/train_net.py \
 --num-gpus 2 --eval-only \
 --config-file output/config.yaml \
@@ -22,7 +22,7 @@ MODEL.WEIGHTS output/directory/for/trained/model/foofarfoo.pth
 ---
 # Annotation visualization
 
-```python
+```bash
 python tools/visualize_data.py \
 --source annotation \
 --config-file configs/COCO-Detection/faster_rcnn_R_50_FPN_1x.yaml \
@@ -32,7 +32,7 @@ python tools/visualize_data.py \
 ---
 # Inference result visualization
 
-```python
+```bash
 python tools/visualize_json_results.py \
 --input output/directory/for/inference/coco_instances_results.json \
 --output output/directory/for/predicted/images --dataset foofarfoo_train
@@ -42,7 +42,7 @@ python tools/visualize_json_results.py \
 # Demo (Image, Video, Webcam)
 ## Images
 
-```python
+```bash
 python demo/demo.py \
 --config-file path/to/config/file/config.yaml \
 --confidence-threshold 0.5 \
@@ -53,7 +53,7 @@ python demo/demo.py \
 
 ## Video
 
-```python
+```bash
 python demo/demo.py \
 --config-file path/to/config/file/config.yaml \
 --video-input path/to/movie/raw_movie.mp4 \
@@ -64,7 +64,7 @@ python demo/demo.py \
 
 ## Webcam
 
-```python
+```bash
 python demo/demo.py \
 --config-file path/to/config/file/config.yaml \
 --webcam \
